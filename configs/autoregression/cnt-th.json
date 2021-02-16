@@ -1,0 +1,30 @@
+{
+  "batch_size": 20,
+  "restore": false,
+  "cnt_config": {
+    "signal_kernel": 7,
+    "channels": 10,
+    "itvl_kernel": 7,
+    "act_fn": "relu"
+  },
+  "truncate_length": [0.001, 7.001],
+  "twohots": true,
+  "delta": 0.5,
+  "embed_signal": false,
+  "layers": [
+    {
+      "type": "conv",
+      "kernel_size": 7,
+      "filter": 1,
+      "padding": "valid",
+      "act_fn": null
+    }
+  ],
+  "learning_rate": 1e-3,
+  "logdir": "cnt",
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "input_length": 13,
+  "offset_range": [13, 16],
+  "output_length": 1
+}

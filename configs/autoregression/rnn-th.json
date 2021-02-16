@@ -1,0 +1,20 @@
+{
+  "exp_name": "data_market",
+  "offset_range": [50, 53],
+  "restore": false,
+  "input_channels": 1,
+  "learning_rate": 1e-03,
+  "output_length": 1,
+  "batch_size": 20,
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "num_filters": 32,
+  "n_layers": 1,
+  "num_labels": 1,
+  "twohots": true,
+  "delta": 0.5,
+  "logdir": "rnn_th",
+  "truncate_length": [0.001, 7.001],
+  "embed_signal": false,
+  "input_length": 50
+}

@@ -1,0 +1,50 @@
+{
+  "input_channel": 10,
+  "dataset": "data_mimic/fold1/",
+  "batch_size": 20,
+  "restore": false,
+  "concat": true,
+  "embed_signal": true,
+  "embed_size": 8,
+  "truncate_length": [0.1, 7.1],
+  "twohots": false,
+  "delta": 0,
+  "resample_config": {
+    "kernel_on_t": true,
+    "output_num": 32,
+    "rnet_kernel": 3,
+    "rnet_bias": true,
+    "rnet_winit": 1.5,
+    "rnet_binit": 0.5,
+    "debug": false,
+    "bnet_hidden_units": 16,
+    "bnet_layer_nums": 2,
+    "activation_fn": "relu",
+    "bnet_bias": true,
+    "bias_on_t": true,
+    "bias_kernel": 7,
+    "bnet_binit": 0.2,
+    "bnet_winit": 1.0,
+    "rnet_layer_nums": 2,
+    "rnet_hidden_units": 16
+  },
+  "layers": [
+    {
+      "type": "conv",
+      "kernel_size": 7,
+      "filter": 16,
+      "padding": "valid",
+      "act_fn": "relu"
+    },
+    {
+      "type": "pp_output",
+      "act_fn": null
+    }
+  ],
+  "learning_rate": 1e-5,
+  "logdir": "pp5",
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "input_length": 13,
+  "output_length": 1
+}
