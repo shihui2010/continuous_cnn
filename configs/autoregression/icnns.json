@@ -1,0 +1,29 @@
+{
+  "batch_size": 20,
+  "restore": false,
+  "layers": [
+    {
+      "type": "conv",
+      "kernel_size": 7,
+      "filter": 84,
+      "act_fn": "relu",
+      "padding": "valid"
+    },
+    {
+      "type": "conv",
+      "kernel_size": 7,
+      "filter": 1,
+      "act_fn": null,
+      "padding": "valid"
+    }
+  ],
+  "kernel": "sinc",
+  "learning_rate": 1e-3,
+  "logdir": "sinc",
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "input_length": 13,
+  "offset_range": [13, 16],
+  "output_length": 1,
+  "embed_signal": false
+}

@@ -1,0 +1,60 @@
+{
+  "exp_name": "test_exp",
+  "prediction": true,
+  "signal_config": {
+    "freq_range": [5, 6],
+    "interval": 1.0,
+    "uniform": false,
+    "offset_range": [13, 16]
+  },
+  "tlayers": [],
+  "layers": [{
+      "type": "conv",
+      "kernel_size": 7,
+      "filter": 1,
+      "act_fn": null,
+      "padding": "valid"
+    }],
+  "concat": false,
+  "embed_signal": false,
+  "restore": false,
+  "input_channels": 1,
+  "delta": 0.5,
+  "truncate_length": [0.001, 7.001],
+  "twohots": false,
+  "resample_config": {
+    "output_num": 4,
+    "rnet_kernel": 3,
+    "rnet_bias": true,
+    "rnet_winit": 1.5,
+    "rnet_binit": 0.5,
+    "debug": false,
+    "bnet_hidden_units": 16,
+    "bnet_layer_nums": 2,
+    "activation_fn": "relu",
+    "bnet_bias": true,
+    "bias_on_t": true,
+    "kernel_on_t": true,
+    "bias_kernel": 7,
+    "bnet_binit": 0.2,
+    "bnet_winit": 1.0,
+    "rnet_layer_nums": 2,
+    "rnet_hidden_units": 16
+  },
+  "learning_rate": 1e-03,
+  "output_length": 1,
+  "cnt_config": {
+    "channels": 16,
+    "signal_kernel": 7,
+    "itvl_kernel": 7,
+    "padding": "VALID"
+  },
+  "batch_size": 20,
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "logdir": "logs/ccnn_th.json",
+  "num_filters": 16,
+  "hidden_size": 16,
+  "num_labels": 1,
+  "input_length": 13
+}

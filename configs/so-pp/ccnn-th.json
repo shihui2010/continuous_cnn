@@ -1,0 +1,49 @@
+{
+  "input_channel": 22,
+  "dataset": "data_so/fold1",
+  "batch_size": 20,
+  "restore": false,
+  "concat": true,
+  "embed_signal": true,
+  "embed_size": 8,
+  "truncate_length": [0.1, 10.1],
+  "twohots": true,
+  "delta": 1,
+  "resample_config": {
+    "output_num": 12,
+    "rnet_kernel": 5,
+    "rnet_bias": true,
+    "rnet_winit": 1.5,
+    "rnet_binit": 0.5,
+    "debug": false,
+    "bnet_hidden_units": 4,
+    "bnet_layer_nums": 2,
+    "activation_fn": "relu",
+    "bnet_bias": true,
+    "bias_on_t": true,
+    "bias_kernel": 10,
+    "bnet_binit": 0.2,
+    "bnet_winit": 1.0,
+    "rnet_layer_nums": 2,
+    "rnet_hidden_units": 4
+  },
+  "layers": [
+    {
+      "type": "conv",
+      "kernel_size": 11,
+      "padding": "valid",
+      "filter": 8,
+      "act_fn": "relu"
+    },
+    {
+      "type": "pp_output",
+      "act_fn": null
+    }
+  ],
+  "learning_rate": 1e-5,
+  "logdir": "th-20",
+  "main_net_bias": true,
+  "activation_fn": "relu",
+  "input_length": 20,
+  "output_length": 1
+}
